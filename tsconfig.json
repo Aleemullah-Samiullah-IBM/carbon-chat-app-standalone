@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+
+    "composite": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@agent-ui/common/*": ["node_modules/@agent-ui/common/src/*"]
+    },
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+
+  "exclude": ["node_modules"],
+  "include": ["src"]
+}
+
+// Made with Bob
