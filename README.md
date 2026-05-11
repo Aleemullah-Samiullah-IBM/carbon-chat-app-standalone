@@ -16,22 +16,20 @@ This is a simple React application that demonstrates the use of the `@carbon/ai-
    npm run dev
    ```
 
-   This should start up successfully and display something like this in terminal,
+   This should start up successfully and display something like this in terminal:
 
    ```
-   cindylu@Cindys-MacBook-Pro carbon-chat-app % npm run dev
+   > @agent-ui/carbon-chat-app@0.1.0 dev
+   > vite
 
-      > @agent-ui/carbon-chat-app@0.1.0 dev
-      > vite
+   VITE v5.4.21  ready in 205 ms
 
-      VITE v5.4.21  ready in 205 ms
-
-      ➜  Local:   http://localhost:5173/
-      ➜  Network: use --host to expose
-      ➜  press h + enter to show help
+   ➜  Local:   http://localhost:5173/
+   ➜  Network: use --host to expose
+   ➜  press h + enter to show help
    ```
 
-   Then you should be able to visit this url to see API Agent.
+   Then you should be able to visit the local URL to see the application.
 
 ## Configuration
 
