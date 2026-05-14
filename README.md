@@ -19,10 +19,13 @@ This is a simple React application that demonstrates the use of the `@carbon/ai-
    This should start up successfully and display something like this in terminal:
 
    ```
-   > @agent-ui/carbon-chat-app@0.1.0 dev
-   > vite
+   > carbon-chat-app-standalone@0.1.0 dev
+   > npm run build:common && vite
 
-   VITE v5.4.21  ready in 205 ms
+   > carbon-chat-app-standalone@0.1.0 build:common
+   > cd src/packages/agent-ui-common && npm install && npm run build && cd ../../..
+
+   VITE v8.0.9  ready in 205 ms
 
    ➜  Local:   http://localhost:5173/
    ➜  Network: use --host to expose
@@ -33,10 +36,11 @@ This is a simple React application that demonstrates the use of the `@carbon/ai-
 
 ## Configuration
 
-The chat component is configured in `src/App.tsx`. Please fill out the API_CONFIG with your local agent details for development.
+The chat component is configured in `src/packages/launchpad-chat-widget/App.tsx`. Please fill out `API_CONFIG` with your local agent details for development.
 
 ## Features
 
 - Integration with Carbon Design System
 - AI-powered chat interface
-- Customizable configuration
+- Shared common package in `src/packages/agent-ui-common`
+- Chat widget app in `src/packages/launchpad-chat-widget`
