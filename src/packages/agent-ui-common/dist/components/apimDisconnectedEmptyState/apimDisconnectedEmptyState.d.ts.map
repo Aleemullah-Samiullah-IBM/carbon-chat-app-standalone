@@ -1,0 +1,1 @@
+{"version":3,"file":"apimDisconnectedEmptyState.d.ts","sourceRoot":"","sources":["../../../src/components/apimDisconnectedEmptyState/apimDisconnectedEmptyState.tsx"],"names":[],"mappings":"AAEA,OAAO,mCAAmC,CAAA;AAE1C,UAAU,+BAA+B;IACvC,mBAAmB,EAAE,CAAC,KAAK,EAAE,GAAG,KAAK,IAAI,CAAA;CAC1C;AAED,QAAA,MAAM,0BAA0B,EAAE,KAAK,CAAC,EAAE,CAAC,+BAA+B,CAwBzE,CAAA;AACD,eAAe,0BAA0B,CAAA"}

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@agent-ui/common": "file:/Users/aleemullahsamiullah/_work/_CommonAgentUI/CommonAgentUI/packages/common",
+    "@agent-ui/common": "file:./src/packages/agent-ui-common",
     "@carbon/ai-chat": "^1.7.0",
     "@carbon/pictograms-react": "^11.101.0",
     "@carbon/react": "^1.30.0",
@@ -27,6 +27,7 @@
     "swiper": "^12.1.3"
   },
   "devDependencies": {
+    "@types/node": "^25.7.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^4.2.0",
@@ -35,8 +36,9 @@
     "vite": "^8.0.9"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "build:common": "cd src/packages/agent-ui-common && npm install && npm run build && cd ../../..",
+    "dev": "npm run build:common && vite",
+    "build": "npm run build:common && vite build",
     "preview": "vite preview"
   },
   "browserslist": {

@@ -1,0 +1,50 @@
+.streaming-content {
+  .streaming-text {
+    white-space: pre-wrap;
+    line-height: 1.5rem;
+
+    .status-update {
+      display: block;
+      font-style: italic;
+    }
+
+    /* fading dots animation */
+    .dots-fade {
+      display: inline-flex;
+      gap: 0.1em;
+    }
+
+    .dot {
+      opacity: 0.3;
+      animation: dot-fade 2s ease-in-out infinite;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+    .dot:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes dot-fade {
+      0%,
+      20% {
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 1;
+      }
+      80%,
+      100% {
+        opacity: 0.3;
+      }
+    }
+
+    /* handle user motion browser preferences */
+    @media (prefers-reduced-motion: reduce) {
+      .dot {
+        animation: none;
+      }
+    }
+  }
+}

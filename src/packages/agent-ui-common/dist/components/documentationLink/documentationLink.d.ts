@@ -1,0 +1,16 @@
+declare global {
+    interface Window {
+        apiConnectCfg?: {
+            formFactor?: string;
+        };
+    }
+}
+/**
+ * Creates a "Learn more" link for API Agent configuration
+ * @param accessToken Access token for authentication
+ * @param frontendClientType - The client type (e.g., vscode)
+ * @param vscode - The vscode API object if in VS Code environment
+ * @returns React component with the appropriate learn more link
+ */
+export declare const documentationLink: (accessToken?: any, frontendClientType?: any, vscode?: any) => import("react/jsx-runtime").JSX.Element;
+//# sourceMappingURL=documentationLink.d.ts.map

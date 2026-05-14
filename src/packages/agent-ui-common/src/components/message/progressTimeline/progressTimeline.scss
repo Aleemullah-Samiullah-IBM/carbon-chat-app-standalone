@@ -1,0 +1,62 @@
+.progress-timeline {
+  padding: 1rem 0;
+
+  .progress-step {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+
+    .step-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 10px;
+
+      .step-circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+
+        &.completed {
+          background-color: var(--cds-support-success, #24a148);
+        }
+
+        &.pending {
+          border: 1px solid var(--cds-support-success, #24a148);
+        }
+      }
+
+      .step-line {
+        width: 2px;
+        flex: 1;
+        background-color: var(--cds-border, #e0e0e0);
+      }
+    }
+
+    .step-content {
+      flex: 1;
+      padding-top: 0;
+
+      .step-header {
+        display: flex;
+
+        .step-name {
+          line-height: 1;
+        }
+      }
+
+      .step-args {
+        margin-left: 1rem;
+
+        pre {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}

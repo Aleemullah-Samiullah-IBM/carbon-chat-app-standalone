@@ -1,0 +1,1 @@
+{"version":3,"file":"nextActions.d.ts","sourceRoot":"","sources":["../../../../src/components/message/nextActions/nextActions.tsx"],"names":[],"mappings":"AAIA,OAAO,oBAAoB,CAAA;AAE3B,UAAU,eAAe;IACvB,cAAc,EAAE,KAAK,CAAC,MAAM,CAAC,CAAA;IAC7B,WAAW,EAAE,OAAO,CAAA;CACrB;AAED,QAAA,MAAM,WAAW,EAAE,KAAK,CAAC,EAAE,CAAC,eAAe,CA6B1C,CAAA;AACD,eAAe,WAAW,CAAA"}

@@ -1,0 +1,8 @@
+.headless-accordion-item {
+  border-block-start: none !important;
+  border-block-end: none !important;
+
+  > :first-child {
+    display: none !important;
+  }
+}

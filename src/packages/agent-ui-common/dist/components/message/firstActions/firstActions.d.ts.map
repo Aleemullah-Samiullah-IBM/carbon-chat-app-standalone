@@ -1,0 +1,1 @@
+{"version":3,"file":"firstActions.d.ts","sourceRoot":"","sources":["../../../../src/components/message/firstActions/firstActions.tsx"],"names":[],"mappings":"AAEA,OAAO,qBAAqB,CAAA;AAE5B,UAAU,gBAAgB;IACxB,eAAe,EAAE,KAAK,CAAC;QAAC,IAAI,EAAE,GAAG,CAAC;QAAC,OAAO,EAAE,MAAM,CAAA;KAAC,CAAC,CAAA;CACrD;AAED,QAAA,MAAM,YAAY,EAAE,KAAK,CAAC,EAAE,CAAC,gBAAgB,CAmB5C,CAAA;AACD,eAAe,YAAY,CAAA"}

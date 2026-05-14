@@ -1,0 +1,70 @@
+.file-download-container {
+  width: fit-content;
+  max-width: 360px;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .file-download-card {
+    background-color: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+
+    .file-extension {
+      padding: 21px 10px 20px 20px;
+      cursor: default;
+    }
+
+    .file-download-card-main {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 2rem;
+
+      .file-title {
+        font-size: medium;
+        cursor: default;
+      }
+
+      .file-description {
+        font-size: small;
+        color: var(--cds-text-secondary);
+        line-height: 1rem;
+        cursor: default;
+      }
+    }
+
+    .file-download-text-button {
+      border-width: none;
+      text-decoration: none;
+      background-color: transparent;
+      min-block-size: 0;
+      padding-block: 0;
+      padding-inline: 0;
+      max-width: fit-content;
+    }
+  }
+
+  .file-download-footer {
+    display: flex;
+    justify-content: end;
+    height: fit-content;
+    width: 100%;
+    padding-bottom: 8px;
+  }
+
+  .download-error {
+    display: flex;
+    align-items: center;
+    color: red;
+    padding: 0.5rem 0;
+
+    .download-error-text {
+      padding-left: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.sample-prompts-container {
+  .prompt-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 250px;
+
+    .prompts-list-item {
+      display: flex;
+    }
+
+    .prompt-copy-button {
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

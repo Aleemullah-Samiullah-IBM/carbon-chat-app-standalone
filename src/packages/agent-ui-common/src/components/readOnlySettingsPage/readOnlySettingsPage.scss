@@ -1,0 +1,64 @@
+.read-only-settings-header {
+  justify-content: space-between;
+  inset-inline: 16px 16px !important;
+  border-block-end: none !important;
+  padding-bottom: 1rem;
+  display: flex;
+
+  .cds--header__name {
+    font-size: 20px !important;
+    font-weight: normal;
+  }
+
+  button,
+  button:hover,
+  button:focus {
+    background-color: transparent;
+    color: var(--cds-text-primary);
+    padding: 0;
+    position: absolute;
+    right: -1rem;
+  }
+}
+
+.read-only-settings-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px 2px #0f62fe33, 0 -80px 70px -65px #0f62fe33 inset;
+
+  &-text-input {
+    margin-bottom: 20px;
+    .cds--text-input {
+      color: #525252;
+    }
+  }
+}
+
+.read-only-settings-inner {
+  padding: 20px;
+  position: relative;
+  z-index: 105;
+  width: calc(100% - 40px);
+  height: calc(100vh - 40px);
+  margin: auto;
+  background: var(--cds-background);
+}
+
+.read-only-settings-actions {
+  margin-top: 20px;
+  &-sign-out {
+    // background-color: #525252;
+    // To make button background gray, uncomment above and add classname to button
+  }
+}
+
+.dark-mode {
+  background: linear-gradient(
+      0deg,
+      rgba(69, 137, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 50%
+    ),
+    #262626;
+}

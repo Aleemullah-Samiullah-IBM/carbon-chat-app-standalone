@@ -1,0 +1,44 @@
+.steps {
+  padding-left: 46px; // match .chat-bubble
+
+  .cds--accordion {
+    min-width: 300px;
+
+    .cds--accordion__item {
+      border: none;
+    }
+  }
+}
+
+.steps-dark {
+  .toolcall-header {
+    color: #a8a8a8 !important;
+    .toolcall-header-right {
+      color: #a8a8a8 !important;
+    }
+  }
+
+  .cds--accordion {
+    border-left: 1px solid #4a4a4a;
+  }
+
+  .toolcall-arguments {
+    color: #a8a8a8;
+  }
+}
+
+.steps-light {
+  .toolcall-header {
+    color: #525252 !important;
+    .toolcall-header-right {
+      color: #525252 !important;
+    }
+  }
+  .cds--accordion {
+    border-left: 1px solid #e0e0e0;
+  }
+
+  .toolcall-arguments {
+    color: #525252;
+  }
+}

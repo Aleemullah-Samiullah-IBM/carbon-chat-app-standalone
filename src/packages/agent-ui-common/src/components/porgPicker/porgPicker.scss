@@ -1,0 +1,30 @@
+// Licensed Materials - Property of IBM
+// (C) Copyright IBM Corporation 2025, 2026
+// US Government Users Restricted Rights - Use, duplication or disclosure
+// restricted by GSA ADP Schedule Contract with IBM Corp.
+
+.pick-porg-container {
+  max-width: 360px;
+
+  .pick-porg-description {
+    div {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .cds--fieldset {
+    padding: 0.5rem 1rem;
+  }
+
+  .cds--fieldset:first-of-type {
+    margin: 0 2.75rem 2rem;
+    background-color: var(--cds-field-01, #ffffff);
+  }
+
+  .cds--fieldset:not(:first-of-type) {
+    margin-left: 2.75rem;
+  }
+  .cds--skeleton__text.cds--skeleton__text--ai {
+    margin-left: 2.75rem;
+  }
+}

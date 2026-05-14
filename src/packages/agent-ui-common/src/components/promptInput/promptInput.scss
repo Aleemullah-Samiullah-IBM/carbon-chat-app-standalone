@@ -1,0 +1,251 @@
+.prompt-input-container {
+  position: relative; // Add positioning context for absolute children
+  display: flex;
+  align-items: center;
+  background-color: var(--cds-chat-prompt-background);
+  border: none;
+  transition: border-bottom 0.25s ease;
+
+  &:focus-within {
+    border-bottom: 2px solid var(--cds-focus);
+  }
+
+  /* Carbon's TextArea renders inside a .cds--form-item wrapper.
+    flex to take most of the width. */
+  .cds--form-item {
+    flex: 1 1 auto; /* grow */
+    min-width: 0; /* prevent overflow when content is long */
+  }
+
+  #prompt-input {
+    width: 100%;
+    color: var(--cds-text-primary);
+    box-sizing: border-box;
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: var(--cds-chat-prompt-background);
+    // field-sizing: content; /* dynamically grow based on content */
+    max-height: 160px;
+    padding: 1rem;
+
+    &::placeholder {
+      color: var(--cds-text-placeholder);
+    }
+  }
+
+  #prompt-input.scroller {
+    scrollbar-color: var(--cds-chat-prompt-background);
+  }
+
+  /* Right-aligned actions container */
+  .prompt-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: auto; /* pushes the actions to the far right */
+  }
+
+  .sendButton {
+    &:focus {
+      outline: none !important;
+      border: 2px solid var(--cds-focus);
+    }
+
+    svg {
+      fill: var(--cds-text-primary) !important;
+      position: relative;
+      cursor: pointer;
+      margin: 12px 8px;
+    }
+  }
+
+  .sendButton-disabled {
+    cursor: not-allowed;
+    svg {
+      fill: var(--cds-text-placeholder) !important;
+      cursor: not-allowed;
+    }
+  }
+
+  .file-uploader-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 2rem;
+
+    .file-upload-button {
+      min-width: 2.5rem !important;
+      max-width: 2.5rem !important;
+      width: 2.5rem !important;
+      height: 2.5rem !important;
+      padding: 0.5rem !important;
+      border-radius: 0 !important;
+
+      svg {
+        fill: var(--cds-icon-on-color) !important;
+      }
+    }
+  }
+
+  .uploaded-files-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--cds-layer-01);
+    max-height: 150px;
+    overflow-y: auto;
+
+    .uploaded-file-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.5rem;
+      background-color: var(--cds-layer-02);
+      border-radius: 4px;
+      font-size: 0.875rem;
+
+      .file-name {
+        color: var(--cds-text-primary);
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .remove-file-button {
+        min-width: 1.5rem !important;
+        padding: 0.25rem !important;
+
+        svg {
+          fill: var(--cds-icon-primary) !important;
+        }
+
+        &:hover svg {
+          fill: var(--cds-icon-on-color-disabled) !important;
+        }
+      }
+    }
+  }
+
+  // Container for all menus - positioned above the input
+  .prompt-menus {
+    position: absolute;
+    bottom: 100%; // Position above the input container
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .commands-menu {
+    width: 100%;
+    margin-bottom: 8px;
+    color: var(--cds-text-primary, #161616);
+    background-color: var(--cds-layer, rgba(141, 141, 141, 0.5));
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+    max-height: 600px;
+    overflow-y: auto;
+
+    .commands-menu-items {
+      color: var(--cds-text-primary, #161616);
+      padding: 0.75rem;
+      cursor: pointer;
+
+      &:focus-visible {
+        outline-color: var(--cds-focus);
+      }
+
+      &:hover {
+        background-color: var(
+          --cds-background-hover,
+          rgba(141, 141, 141, 0.12)
+        );
+      }
+
+      p.description {
+        font-size: 0.8rem;
+        padding-top: 0.2rem;
+        color: var(--cds-text-secondary, #161616);
+      }
+
+      p.arguments {
+        font-size: 0.8rem;
+        color: var(--cds-text-secondary, #161616);
+
+        .argument-name {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .parameter-menu {
+    width: 100%;
+    margin-bottom: 8px;
+    color: var(--cds-text-primary, #161616);
+    background-color: var(--cds-layer, rgba(141, 141, 141, 0.5));
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+    max-height: 600px;
+    overflow-y: auto;
+
+    .parameter-menu-items {
+      color: var(--cds-text-primary, #161616);
+      padding: 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(
+          --cds-background-hover,
+          rgba(141, 141, 141, 0.12)
+        );
+      }
+    }
+  }
+
+  .file-menu {
+    width: 100%;
+    margin-bottom: 4px;
+    color: var(--cds-text-primary, #161616);
+    background-color: var(--cds-layer, rgba(141, 141, 141, 0.5));
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    z-index: 8000;
+    max-height: 600px;
+    overflow-y: auto;
+
+    .file-menu-total {
+      padding: 0.5rem 1rem;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+
+      .cds--inline-loading {
+        inline-size: unset !important;
+      }
+    }
+
+    .file-menu-items {
+      padding: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(
+          --cds-background-hover,
+          rgba(141, 141, 141, 0.12)
+        );
+      }
+
+      .file-menu-name {
+        color: var(--cds-text-primary, #161616);
+      }
+      .file-menu-path {
+        color: var(--cds-text-secondary, #161616);
+        font-size: small;
+      }
+    }
+  }
+}

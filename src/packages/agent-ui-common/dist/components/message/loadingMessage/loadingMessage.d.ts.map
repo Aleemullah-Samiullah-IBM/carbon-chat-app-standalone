@@ -1,0 +1,1 @@
+{"version":3,"file":"loadingMessage.d.ts","sourceRoot":"","sources":["../../../../src/components/message/loadingMessage/loadingMessage.tsx"],"names":[],"mappings":"AAKA,UAAU,mBAAmB;IAC3B,WAAW,EAAE,OAAO,CAAA;IACpB,mBAAmB,CAAC,EAAE,OAAO,CAAA;CAC9B;AAED,eAAO,MAAM,cAAc,GAAI,uCAG5B,mBAAmB,4CAuCrB,CAAA"}

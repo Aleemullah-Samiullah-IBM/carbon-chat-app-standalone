@@ -1,0 +1,25 @@
+.reasoning-container {
+  // allow reasoning to span whole width
+  .cds--accordion__content {
+    padding-inline-end: 0 !important;
+  }
+  .reasoning-block {
+    margin-left: 46px; // match .chat-bubble
+    border-left: 1px solid #ccc;
+    padding-left: 3em;
+    position: relative;
+
+    &::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      padding-left: 1em;
+      color: #ccc;
+    }
+
+    .reasoning-content {
+      white-space: pre-wrap;
+      line-height: 1.5rem;
+    }
+  }
+}

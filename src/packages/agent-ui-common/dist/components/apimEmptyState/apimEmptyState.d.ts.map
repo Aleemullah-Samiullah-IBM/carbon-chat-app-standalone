@@ -1,0 +1,1 @@
+{"version":3,"file":"apimEmptyState.d.ts","sourceRoot":"","sources":["../../../src/components/apimEmptyState/apimEmptyState.tsx"],"names":[],"mappings":"AAGA,OAAO,uBAAuB,CAAA;AAE9B,UAAU,mBAAmB;IAC3B,cAAc,EAAE,CAAC,KAAK,EAAE,GAAG,KAAK,IAAI,CAAA;CACrC;AAED,QAAA,MAAM,cAAc,EAAE,KAAK,CAAC,EAAE,CAAC,mBAAmB,CAsBjD,CAAA;AACD,eAAe,cAAc,CAAA"}

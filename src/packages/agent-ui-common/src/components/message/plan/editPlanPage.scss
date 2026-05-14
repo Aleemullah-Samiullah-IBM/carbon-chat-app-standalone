@@ -1,0 +1,170 @@
+.editPlanOuterContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 10000;
+  position: relative;
+}
+
+.edit-plan-settings-header {
+  justify-content: space-between;
+  inset-inline: 16px 16px !important;
+  border-block-end: none !important;
+  padding-bottom: 1.5rem;
+  display: flex;
+
+  .cds--header__name {
+    font-size: 20px !important;
+    font-weight: normal;
+  }
+
+  button,
+  button:hover,
+  button:focus {
+    background-color: transparent;
+    color: var(--cds-text-primary);
+    padding: 0;
+    position: absolute;
+    right: -1rem;
+  }
+}
+
+.edit-plan-settings-inner {
+  padding: 20px;
+  position: relative;
+  z-index: 105;
+  width: calc(100% - 40px);
+  height: calc(100vh - 40px);
+  margin: auto;
+  background: var(--cds-background);
+}
+
+.edit-plan-settings-body {
+  height: 75%;
+  overflow-y: scroll;
+  scrollbar-color: auto;
+}
+
+.edit-plan-settings-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--cds-background);
+
+  &-text-input {
+    margin-bottom: 20px;
+    .cds--text-input {
+      color: #525252;
+    }
+  }
+
+  .cds--inline-notification {
+    max-inline-size: unset;
+    min-inline-size: unset;
+  }
+
+  .warning-notification {
+    color: var(--cds-text-inverse, #ffffff);
+    background: var(--cds-background-inverse, #393939) !important;
+  }
+
+  .cds--modal-content--with-form {
+    margin: 16px;
+  }
+
+  .rowParent {
+    width: 100%;
+    display: inline-grid;
+
+    .rowDiv {
+      display: inline-flex;
+
+      .deleteColumn {
+        width: 5%;
+        min-width: 1.5rem;
+        padding-top: 1rem;
+      }
+
+      .fieldColumn {
+        width: 95%;
+        padding: 0.5rem 0;
+
+        .cds--fieldset {
+          padding-bottom: 16px;
+        }
+      }
+
+      .textAreaClass {
+        padding-top: 0.5rem;
+      }
+
+      .cds--label {
+        padding: 8px 0;
+        font-size: 12pt;
+      }
+    }
+  }
+
+  .deleteIcon {
+    border: none;
+    padding-top: 0;
+    inline-size: initial;
+  }
+
+  .deleteIcon:focus,
+  .deleteIcon:hover {
+    background-color: transparent;
+  }
+
+  .formBackground {
+    padding: 16px;
+
+    .cds--text-input {
+      background-color: transparent;
+    }
+  }
+}
+
+.edit-plan-settings-actions {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  position: fixed;
+  z-index: 8000;
+  display: flex;
+  align-items: center;
+  background-color: var(--cds-background, #ffffff);
+  block-size: 3rem;
+  border-block-end: 1px solid var(--cds-border-subtle);
+  inset-block-end: 16px;
+  inset-inline: 20px 20px;
+  button {
+    width: 50%;
+    max-inline-size: none;
+  }
+}
+
+.formBackground {
+  background-color: var(--cds-field-01, #ffffff);
+}
+
+.contentSwitcherDiv {
+  position: absolute;
+  left: 100px;
+  width: 100px;
+
+  .cds--content-switcher--icon-only {
+    justify-content: space-evenly;
+  }
+
+  button {
+    align-items: center;
+  }
+}

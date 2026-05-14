@@ -1,0 +1,179 @@
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .cds--skeleton__text.cds--skeleton__text--ai {
+    margin-left: 2.75rem;
+  }
+
+  .cds--inline-notification--error {
+    margin-bottom: 1rem;
+  }
+
+  .message {
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'IBM Plex Sans';
+
+    &.user {
+      align-self: flex-end;
+
+      p.sender-type {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 14px;
+        font-weight: 100;
+        justify-content: flex-end;
+        padding-bottom: 8px;
+        padding-right: 6px;
+      }
+
+      .chat-bubble {
+        padding: 8px 16px;
+        border-radius: 0.5rem 0 0.5rem 0.5rem;
+        width: fit-content;
+        background-color: var(--cds-chat-bubble-user);
+        float: right;
+        line-height: 1.5rem;
+        margin-right: 6px;
+        margin-left: 45px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+    }
+
+    .expand-link {
+      margin-top: 1rem;
+      padding-left: 36px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .qa-response-box {
+      padding-left: 36px;
+      padding-top: 4px;
+      white-space: pre-wrap;
+      line-height: 1.5rem;
+    }
+
+    &.bot {
+      header {
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-size: 14px;
+        font-weight: 100;
+        word-break: break-word;
+
+        .cds--overflow-menu__wrapper {
+          position: absolute;
+          right: 0;
+        }
+
+        .bot-header {
+          padding-left: 1rem;
+
+          .pipe-separator {
+            padding: 0 0.5rem;
+          }
+        }
+
+        .show-steps-toggle {
+          min-block-size: initial !important;
+          padding: 2px;
+          display: inline-flex;
+          align-items: center;
+
+          svg {
+            vertical-align: middle;
+            margin-top: 2px;
+            transition: transform 0.3s ease;
+
+            // toggle arrow animation
+            &.rotated {
+              transform: rotate(-180deg);
+            }
+          }
+
+          &:active,
+          &:hover {
+            background: none;
+            color: none !important;
+          }
+
+          &:focus {
+            border: none;
+            box-shadow: none;
+            outline: none;
+          }
+
+          .isDark {
+            fill: #78a9ff;
+          }
+
+          .light {
+            fill: #0f62fe;
+          }
+        }
+      }
+      .chat-bubble {
+        padding-left: 46px;
+        padding-right: 6px;
+        padding-top: 4px;
+        white-space: pre-wrap;
+        line-height: 1.5rem;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        ul li,
+        pre {
+          word-break: break-word;
+        }
+        pre {
+          white-space: pre-wrap;
+        }
+
+        // ensure the styling of loading message is correct in vscode
+        &.loading-content {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+  .tooltip {
+    padding-left: 8px;
+    align-self: end;
+    white-space: pre-wrap !important;
+    .cds--popover--open > .cds--popover > .cds--popover-content {
+      max-width: 80vw;
+      max-height: 80vh;
+      font-size: 12px;
+      overflow-y: auto;
+    }
+  }
+
+  .show-id-to-copy-modal {
+    .cds--modal-container--xs {
+      inline-size: 50% !important;
+      block-size: unset;
+      inset-block-start: unset;
+    }
+  }
+  .response-details {
+    padding-top: 1rem;
+    p {
+      font-size: 14px !important;
+      display: inline !important;
+      white-space: pre-wrap !important;
+      padding-top: 1rem;
+    }
+  }
+}

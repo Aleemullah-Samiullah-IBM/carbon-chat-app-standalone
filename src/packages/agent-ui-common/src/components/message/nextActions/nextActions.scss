@@ -1,0 +1,19 @@
+.next-action-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    border: 1px solid #78a9ff;
+    color: #78a9ff;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  button:hover,
+  button:focus {
+    background-color: #8d8d8d3d;
+    border: 1px solid #8d8d8d3d;
+    color: white;
+  }
+}

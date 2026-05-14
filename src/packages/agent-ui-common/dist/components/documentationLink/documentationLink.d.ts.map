@@ -1,0 +1,1 @@
+{"version":3,"file":"documentationLink.d.ts","sourceRoot":"","sources":["../../../src/components/documentationLink/documentationLink.tsx"],"names":[],"mappings":"AAQA,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,MAAM;QACd,aAAa,CAAC,EAAE;YACd,UAAU,CAAC,EAAE,MAAM,CAAA;SACpB,CAAA;KACF;CACF;AAMD;;;;;;GAMG;AACH,eAAO,MAAM,iBAAiB,GAC5B,cAAc,GAAG,EACjB,qBAAqB,GAAG,EACxB,SAAS,GAAG,4CAoCb,CAAA"}

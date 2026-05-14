@@ -1,0 +1,49 @@
+.i18n-demo {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h1 {
+    margin-bottom: 2rem;
+    color: #161616;
+  }
+
+  .demo-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+
+    h2,
+    h3 {
+      margin-bottom: 1rem;
+      color: #161616;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #e0e0e0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        strong {
+          color: #0f62fe;
+        }
+      }
+    }
+  }
+
+  .language-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+// Made with Bob

@@ -1,0 +1,105 @@
+.toolbar-container {
+  display: flex;
+  justify-content: space-between;
+
+  .cds--header {
+    width: 100%;
+    margin-top: 4px;
+    border-top: 1px solid var(--cds-ai-border-strong, #4589ff);
+    border-left: 1px solid var(--cds-ai-border-strong, #4589ff);
+    border-right: 1px solid var(--cds-ai-border-strong, #4589ff);
+    justify-content: space-between;
+  }
+
+  .cds--header__name {
+    font-size: 0.9rem;
+    padding: 0 8px;
+  }
+
+  .cds--btn.cds--btn--icon-only.cds--header__action svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .env-details {
+    margin-left: auto;
+    margin-top: 4px;
+    font-size: 0.7rem;
+  }
+
+  .orgTruncation {
+    display: block;
+    width: 55px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+
+  .linkButton:hover,
+  .linkButton:focus,
+  .linkButton:active {
+    background-color: unset;
+    border: none;
+    box-shadow: none;
+    transition: none;
+    color: none;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.toolbar-sub-item {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  .agent-ui-overflow-menu {
+    margin-left: 0.5rem;
+  }
+}
+
+.menu-items {
+  margin-top: 4px;
+  .menu-sub-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menuIcon {
+  position: absolute;
+  right: 1rem;
+}
+.aiSlug {
+  a {
+    color: var(--cds-link-primary, #0062fe);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+  .pt-1rem {
+    padding-top: 1rem;
+  }
+  .pb-1rem {
+    padding-bottom: 1rem;
+  }
+}
+
+.language-indicator {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  margin-top: 4px;
+
+  .language-button {
+    font-size: 0.75rem;
+    padding: 0 0.5rem;
+    min-height: 2rem;
+    cursor: help;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,84 @@
+.toolcall {
+  .cds--accordion__heading {
+    align-items: flex-start;
+  }
+
+  .cds--accordion__arrow {
+    margin: 12px 6px 12px 16px !important;
+  }
+
+  .cds--accordion__title {
+    padding: 0px !important;
+  }
+
+  .toolcall-header {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+    gap: 16px;
+
+    .toolcall-header-left {
+      white-space: nowrap;
+    }
+
+    .toolcall-header-right {
+      display: flex;
+      flex-direction: column;
+      color: var(--cds-text-secondary);
+      gap: 4px;
+
+      .toolcall-title {
+      }
+
+      .toolcall-status-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4px;
+        font-size: 12px; // this is what was provided in design
+
+        .toolcall-error-message {
+          color: var(--cds-text-error);
+        }
+
+        .toolcall-warning-message {
+          color: var(--cds-support-warning);
+        }
+
+        .toolcall-success-message {
+          color: var(--cds-support-success);
+        }
+      }
+    }
+
+    .status-svg-wrapper {
+      padding: 2px 0px 0px 0px;
+      width: 16px;
+      height: 16px;
+    }
+
+    .svg-checkmark {
+      fill: var(--cds-support-success);
+    }
+
+    .svg-incomplete {
+      fill: var(--cds-support-info);
+    }
+
+    .svg-not-started {
+      fill: var(--cds-support-info);
+    }
+
+    .svg-error {
+      fill: var(--cds-support-error);
+    }
+
+    .svg-warning {
+      fill: var(--cds-support-warning);
+    }
+  }
+
+  .toolcall-arguments {
+    white-space: pre-wrap;
+  }
+}

@@ -1,0 +1,13 @@
+.mcp-auth-modal {
+  .cds--modal-close-button {
+    display: none; /* don't allow user to close modal */
+  }
+  .cds--form-item {
+    padding-bottom: 1rem;
+
+    .required-asterisk {
+      color: red;
+      margin-left: 0.125rem;
+    }
+  }
+}

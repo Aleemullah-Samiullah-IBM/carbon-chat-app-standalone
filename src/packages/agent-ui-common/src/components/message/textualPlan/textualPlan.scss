@@ -1,0 +1,9 @@
+.textual-plan-container {
+  padding: 1rem 0;
+
+  .textual-plan-title {
+    display: flex;
+    align-items: center;
+    font-weight: var(--cds-heading-04-font-weight, 600);
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"headlessAccordion.d.ts","sourceRoot":"","sources":["../../../../src/components/message/headlessAccordion/headlessAccordion.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAC,aAAa,EAAC,MAAM,eAAe,CAAA;AAC3C,OAAO,0BAA0B,CAAA;AAEjC,UAAU,sBACR,SAAQ,KAAK,CAAC,cAAc,CAAC,OAAO,aAAa,CAAC;CAAG;AAEvD,QAAA,MAAM,iBAAiB,GAAI,OAAO,sBAAsB,4CAWvD,CAAA;AAED,eAAe,iBAAiB,CAAA"}

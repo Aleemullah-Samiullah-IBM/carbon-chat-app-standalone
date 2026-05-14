@@ -1,0 +1,1 @@
+{"version":3,"file":"ErrorContext.d.ts","sourceRoot":"","sources":["../../src/contexts/ErrorContext.tsx"],"names":[],"mappings":"AAAA,OAAc,EAEZ,SAAS,EAIV,MAAM,OAAO,CAAA;AAId,eAAO,MAAM,QAAQ,WAAiC,CAAA;AAatD,UAAU,kBAAkB;IAC1B,QAAQ,EAAE,SAAS,CAAA;CACpB;AAED,eAAO,MAAM,aAAa,GAAI,cAAY,kBAAkB,4CAqD3D,CAAA"}

@@ -1,0 +1,15 @@
+#apim-empty-state-container {
+  width: 100%;
+  padding: 0 3rem;
+  margin: auto;
+  .c4p--empty-state__header {
+    font-size: 16px;
+  }
+  .c4p--empty-state__subtitle p {
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+  button {
+    width: 75%;
+  }
+}
