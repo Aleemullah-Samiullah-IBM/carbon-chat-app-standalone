@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@agent-ui/common": "file:./src/packages/agent-ui-common",
-    "@carbon/ai-chat": "^1.7.0",
+    "@agent-ui/common": "workspace:*",
+    "@carbon/ai-chat": "^1.12.0",
     "@carbon/pictograms-react": "^11.101.0",
     "@carbon/react": "^1.30.0",
     "@lit/react": "^1.0.0",
@@ -36,9 +36,9 @@
     "vite": "^8.0.9"
   },
   "scripts": {
-    "build:common": "cd src/packages/agent-ui-common && npm install && npm run build && cd ../../..",
-    "dev": "npm run build:common && vite",
-    "build": "npm run build:common && vite build",
+    "build:common": "cd src/packages/agent-ui-common && pnpm install && pnpm run build && cd ../../..",
+    "dev": "pnpm run build:common && vite",
+    "build": "pnpm run build:common && vite build",
     "preview": "vite preview"
   },
   "browserslist": {
