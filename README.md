@@ -1,6 +1,6 @@
-# Carbon Chat App
+# Launchpad Chat Widget
 
-This is a simple React application that demonstrates the use of the `@carbon/ai-chat` component.
+A React-based chat widget application built with Carbon Design System, featuring an AI-powered chat interface for seamless user interactions.
 
 ## Getting Started
 
