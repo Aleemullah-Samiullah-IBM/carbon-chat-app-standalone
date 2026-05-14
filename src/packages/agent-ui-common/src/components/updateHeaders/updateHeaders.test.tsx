@@ -12,6 +12,8 @@ vi.mock('../../utilities/customHeadersStorage', () => ({
   customHeadersToObject: vi.fn(),
   getCustomHostUrl: vi.fn(() => null),
   saveCustomHostUrl: vi.fn(),
+  getCustomAgentType: vi.fn(() => null),
+  saveCustomAgentType: vi.fn(),
 }))
 
 // Helper to wrap components with APIProvider
@@ -59,8 +61,9 @@ describe('UpdateHeadersModal', () => {
         screen.getByText(/Create, modify, or remove custom HTTP headers/),
       ).toBeInTheDocument()
       expect(screen.getByText('Security Note')).toBeInTheDocument()
+      // The header title is dynamic based on agent type (e.g., "APIC Headers (Optional Overrides)")
       expect(
-        screen.getByText('IBM Headers (Optional Overrides)'),
+        screen.getByText(/Headers \(Optional Overrides\)/),
       ).toBeInTheDocument()
       expect(screen.getByText('Additional Custom Headers')).toBeInTheDocument()
     })
@@ -106,7 +109,8 @@ describe('UpdateHeadersModal', () => {
         />,
       )
 
-      expect(screen.getByRole('button', {name: /Cancel/i})).toBeInTheDocument()
+      const cancelButtons = screen.getAllByRole('button', {name: /Cancel/i})
+      expect(cancelButtons.length).toBeGreaterThan(0)
       expect(
         screen.getByRole('button', {name: /Save changes/i}),
       ).toBeInTheDocument()
@@ -123,6 +127,8 @@ describe('UpdateHeadersModal', () => {
       vi.mocked(customHeadersStorage.getCustomHeaders).mockReturnValue(
         mockHeaders,
       )
+      // Mock the agent type to match the headers
+      vi.mocked(customHeadersStorage.getCustomAgentType).mockReturnValue('APIC')
 
       renderWithProvider(
         <UpdateHeadersModal
@@ -180,6 +186,8 @@ describe('UpdateHeadersModal', () => {
       vi.mocked(customHeadersStorage.getCustomHeaders).mockReturnValue(
         mockHeaders,
       )
+      // Mock the agent type to match the headers
+      vi.mocked(customHeadersStorage.getCustomAgentType).mockReturnValue('APIC')
 
       renderWithProvider(
         <UpdateHeadersModal
@@ -337,6 +345,8 @@ describe('UpdateHeadersModal', () => {
       vi.mocked(customHeadersStorage.getCustomHeaders).mockReturnValue(
         mockHeaders,
       )
+      // Mock the agent type to match the headers
+      vi.mocked(customHeadersStorage.getCustomAgentType).mockReturnValue('APIC')
 
       renderWithProvider(
         <UpdateHeadersModal
@@ -352,7 +362,7 @@ describe('UpdateHeadersModal', () => {
       expect(userInput.value).toBe('test-user')
 
       const clearButtons = screen.getAllByRole('button', {
-        name: /Clear this header/i,
+        name: /Clear/i,
       })
       // Find the enabled clear button for X-ibm-user
       const enabledClearButton = clearButtons.find(
@@ -373,8 +383,8 @@ describe('UpdateHeadersModal', () => {
       )
 
       const clearButtons = screen.getAllByRole('button', {
-        name: /Clear this header/i,
-      })
+        name: /Clear/i,
+      }).filter(btn => btn.getAttribute('aria-labelledby')?.includes('tooltip'))
 
       // All clear buttons should be disabled initially
       clearButtons.forEach(btn => {
@@ -742,8 +752,9 @@ describe('UpdateHeadersModal', () => {
         />,
       )
 
-      const cancelButton = screen.getByRole('button', {name: /Cancel/i})
-      fireEvent.click(cancelButton)
+      const cancelButtons = screen.getAllByRole('button', {name: /Cancel/i})
+      // Click the first Cancel button (main modal's cancel button)
+      fireEvent.click(cancelButtons[0])
 
       expect(mockOnClose).toHaveBeenCalled()
     })

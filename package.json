@@ -39,7 +39,8 @@
     "build:common": "cd src/packages/agent-ui-common && pnpm install && pnpm run build && cd ../../..",
     "dev": "pnpm run build:common && vite",
     "build": "pnpm run build:common && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:common": "cd src/packages/agent-ui-common && pnpm test"
   },
   "browserslist": {
     "production": [

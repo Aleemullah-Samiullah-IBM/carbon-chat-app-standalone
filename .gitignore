@@ -4,7 +4,9 @@ node_modules
 .pnp.js
 
 # Testing
-/coverage
+**/coverage/
+*.lcov
+.nyc_output
 
 # Production
 /build
