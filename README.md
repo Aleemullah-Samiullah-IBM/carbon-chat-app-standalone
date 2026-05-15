@@ -19,10 +19,10 @@ A React-based chat widget application built with Carbon Design System, featuring
    This should start up successfully and display something like this in terminal:
 
    ```
-   > carbon-chat-app-standalone@0.1.0 dev
+   > iwhi-launchpad-ui@0.1.0 dev
    > npm run build:common && vite
 
-   > carbon-chat-app-standalone@0.1.0 build:common
+   > iwhi-launchpad-ui@0.1.0 build:common
    > cd src/packages/agent-ui-common && npm install && npm run build && cd ../../..
 
    VITE v8.0.9  ready in 205 ms

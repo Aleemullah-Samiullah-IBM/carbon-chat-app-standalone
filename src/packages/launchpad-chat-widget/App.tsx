@@ -28,7 +28,7 @@ export const App = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [showLanding, setShowLanding] = useState<boolean>(true)
   const [allChats, setAllChats] = useState<any[]>([])
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true)
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false)
   const [viewMode, setViewMode] = useState<'fullscreen' | 'sidebar'>('fullscreen')
   const {setStartNewChat} = useMyContext()
   const {apiService, configureService} = useAPI()
