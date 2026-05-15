@@ -6,8 +6,8 @@ import {useError} from '@agent-ui/common/contexts/ErrorContext'
 import {Block} from '@agent-ui/common/components/block/block'
 import {getAuthContext, getFrontendContext} from './platform/platform'
 import {getChatConfig} from './utilities/helpers'
-import {Chat} from './components/Chat/chat'
-import {LandingPage} from './components/LandingPage/LandingPage'
+import {Chat} from './views/Chat/chat'
+import {LandingPage} from './views/LandingPage/LandingPage'
 
 // const API_CONFIG = {
 //   hostUrl: 'http://localhost:6005',
